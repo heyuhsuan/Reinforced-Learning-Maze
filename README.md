@@ -16,6 +16,6 @@ The agent starts at a specified position in the maze and can perform four action
 1. Moving out of bounds: Action is invalid, agent stays in the same position, penalty of -10.
 2. Hitting a wall: Action is invalid, agent stays in the same position, penalty of -10.
 3. Reaching the finish point: Action is valid, agent reaches the terminal state, and the process ends.
-4. Going back to a previously visited block: Action is valid, agent receives a corresponding reward.
-5. Moving to a treasure block: Action is valid, agent receives a corresponding reward.
-6. Moving to an empty block: Action is valid, agent receives a corresponding reward.
+4. Going back to a previously visited block: Action is valid, but agent receives a penalty of -5 to discourage it from moving back and forth on the same blocks.
+5. Moving to a treasure block: Action is valid, agent receives a corresponding reward (Score + 1).
+6. Moving to an empty block: Action is valid, agent receives a corresponding reward of 3.
